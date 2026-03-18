@@ -1,7 +1,7 @@
 .container{
     display: grid;
-    grid-template-columns: repeat(pxpx);
-    grid-template-rows: repeat(pxpx);
+    grid-template-columns:(4);
+    grid-template-rows:(5);
     padding: 20px;
     margin-top: 20px;
     margin-left: 20px;
@@ -12,86 +12,82 @@
     "box3 box3 box3 box7"
     "box4 box5 box6 box7"
     "box8 box8 box8 box8";
+    font:status-bar;
+    font-size: large;
+    
 
 }
 .box{
     border-start-end-radius: 20px;
-    border-end-start-radius: 20px;
     border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    border: 2.5px solid black;
+    background-color: turquoise;
 }
 .box1{
-    background-color: darkgray;
     grid-area: box1;
     text-align: center;
     line-height: 100px;
-    border: 2.5px solid black;
 }
 .box2{
-    background-color: darkgray;
     grid-area: box2;
     text-align: center;
     line-height: 100px;
-    border: 2.5px solid black;
 }
 .box3{
-    background-color: darkgray;
     grid-area: box3;
     text-align: center;
     line-height: 200px;
-    border: 2.5px solid black;
 }
 .box4{
-    background-color: darkgray;
     grid-area: box4;
     text-align: center;
     line-height: 100px;
-    border: 2.5px solid black;
 }
 
 .box5{
-    background-color: darkgray;
     grid-area: box5;
     text-align: center;
     line-height: 100px;
-    border: 2.5px solid black;
 }
 
 .box6{
-    background-color: darkgray;
     grid-area: box6;
     text-align: center;
     line-height: 100px;
-    border: 2.5px solid black;
 }
 
 .box7{
-    background-color: darkgray;
     grid-area: box7;
     text-align: center;
     line-height: 300px;
-    border: 2.5px solid black;
 }
 
 .box8{
-    background-color: darkgray;
     grid-area: box8;
     text-align: center;
     line-height: 100px;
-    border: 2.5px solid black;
 }
 
 @media (max-width: 768px){
+    .box3{
+        line-height: 200px;
+
+    }
+    .box7{
+        line-height: 100px;
+    }
     .container{
-    display: grid;
+        display: grid;
 
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(12,50px);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9,100px);
 
-    grid-template-areas: 
-        "header"
+        grid-template-areas: 
         "box1"
         "box2"
+        "box3"
         "box3"
         "box4"
         "box5"
