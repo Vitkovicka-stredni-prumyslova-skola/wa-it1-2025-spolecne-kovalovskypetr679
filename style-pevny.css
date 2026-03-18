@@ -1,0 +1,35 @@
+:root {
+    --color1: #d8c8bc;
+    --color2: #cac5a1;
+    --color3: #283c64;
+    --color4: #305c68;
+    --color5: #376d71;
+  }
+  
+  div#container{
+    background-color: var(--color1);
+    width: 1440px;
+    height: 1000px;
+    margin: auto;
+  }
+  header{
+    background-color: var(--color2);
+    height: 400px;
+  }
+  nav{
+    background-color: var(--color3);
+    height: 350px;
+    width: 400px;
+    float: left;
+  }
+  main{
+    background-color: var(--color4);
+    height: 350px;
+    width: 800px;
+    float: right;
+  }
+  footer{
+    background-color: var(--color5);
+    height: 400px;
+    clear: left;
+  }
