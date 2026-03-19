@@ -7,14 +7,14 @@
     margin-left: 20px;
     gap:10px;
     grid-template-areas:
-    "box1 box2 box2 box2"
-    "box3 box3 box3 box7"
-    "box3 box3 box3 box7"
-    "box4 box5 box6 box7"
-    "box8 box8 box8 box8";
+    "logo menu menu menu"
+    "hero hero hero sidebar"
+    "hero hero hero sidebar"
+    "karta1 karta2 karta3 sidebar"
+    "footer footer footer footer";
     font:message-box;
-
     font-size: larger;
+
     
 
 }
@@ -28,46 +28,46 @@
     background-color: rgba(255, 134, 134, 0.233);
 }
 .box1{
-    grid-area: box1;
+    grid-area: logo;
     text-align: center;
     line-height: 100px;
 }
 .box2{
-    grid-area: box2;
+    grid-area: menu;
     text-align: center;
     line-height: 100px;
 }
 .box3{
-    grid-area: box3;
+    grid-area: hero;
     text-align: center;
     line-height: 200px;
 }
 .box4{
-    grid-area: box4;
+    grid-area: karta1;
     text-align: center;
     line-height: 100px;
 }
 
 .box5{
-    grid-area: box5;
+    grid-area: karta2;
     text-align: center;
     line-height: 100px;
 }
 
 .box6{
-    grid-area: box6;
+    grid-area: karta3;
     text-align: center;
     line-height: 100px;
 }
 
 .box7{
-    grid-area: box7;
+    grid-area: sidebar;
     text-align: center;
     line-height: 300px;
 }
 
 .box8{
-    grid-area: box8;
+    grid-area: footer;
     text-align: center;
     line-height: 100px;
 }
@@ -84,19 +84,19 @@
         display: grid;
 
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(10,100px);
+        grid-template-rows: repeat(8,100px);
 
         grid-template-areas: 
-        "box1"
-        "box2"
-        "box3"
-        "box3"
-        "gap"
-        "box4"
-        "box5"
-        "box6"
-        "box7"
-        "box8"
+        "logo"
+        "menu"
+        "hero"
+        "hero"
+
+        "karta1"
+        "karta2"
+        "karta3"
+        "sidebar"
+        "footer"
     ;
 }
 
