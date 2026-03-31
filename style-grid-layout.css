@@ -1,15 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container{
     display: grid;
 
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(6,100px);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 100px);
     gap: 10px;
 
     grid-template-areas: 
       "header header header header header"
-        "nav main main main box1"
-        "nav main main main box2"
-        "nav main main main box3"
+        ". nav nav nav ."
+        ". main main main box1"
+        ". main main main box2"
+        ". main main main box3"
         ". box4 box5 box6 ."
         "footer footer footer footer footer"
     ;
@@ -21,66 +27,65 @@ header{
 }
 
 main{
-    background-color: antiquewhite;
+    background-color: blanchedalmond;
     grid-area: main;
 }
 
 nav{
-    background-color: blue;
+    background-color: blueviolet;
     grid-area: nav;
 }
 
 footer{
-    background-color: azure;
+    background-color: burlywood;
     grid-area: footer;
 }
-
 .box1{
-    background-color: darkgray;
+    background-color: aqua;
     grid-area: box1;
 }
 .box2{
-    background-color: darkgray;
+    background-color: aqua;
     grid-area: box2;
 }
 .box3{
-    background-color: darkgray;
+    background-color: aqua;
     grid-area: box3;
 }
 .box4{
-    background-color: darkgray;
+    background-color: aqua;
     grid-area: box4;
 }
 .box5{
-    background-color: darkgray;
+    background-color: aqua;
     grid-area: box5;
 }
 .box6{
-    background-color: darkgray;
+    background-color: aqua;
     grid-area: box6;
 }
 
 @media (max-width: 768px){
-    .container{
+     .container{
     display: grid;
 
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(12,100px);
+    grid-template-rows: repeat(12, 100px);
+    gap: 0px;
 
     grid-template-areas: 
-      "header "
+      "header"
         "nav"
-        "main "
-        "main "
-        "main "
-        "box1 "
-        "box2 "
-        "box3 "
-        "box4 "
-        "box5 "
-        "box6 "s
-        "footer"
+        "main"
+        "main"
+        "main"
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "box5"
+        "box6"
+        "UwUfooter"
     ;
 }
-
 }
