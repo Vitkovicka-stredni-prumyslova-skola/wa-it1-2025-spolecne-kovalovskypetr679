@@ -4,15 +4,27 @@
     box-sizing: border-box;
 }
 
-.menu li a{
+.menu{
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    
 }
-
+.menu li a:hover{
+    background-color: brown;
+}
 .menu li a{
     text-decoration: none;
     color: black;
     background-color: white;
     padding: 12px;
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    
 }
 
 .container{
@@ -46,6 +58,8 @@ main{
 nav{
     background-color: blueviolet;
     grid-area: nav;
+    align-items: center;
+    display: flex;
 }
 
 footer{
@@ -85,6 +99,8 @@ footer{
     grid-template-rows: repeat(12, 100px);
     gap: 0px;
 
+    
+
     grid-template-areas: 
       "header"
         "nav"
@@ -99,5 +115,13 @@ footer{
         "box6"
         "UwUfooter"
     ;
+}
+.menu{
+    list-style: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
 }
 }
