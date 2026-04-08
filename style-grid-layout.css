@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+.menu li a{
+    list-style: none;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 12px;
+}
+
 .container{
     display: grid;
 
