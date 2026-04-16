@@ -51,8 +51,66 @@ header{
 }
 
 main{
+    .card{
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 12px;
+        flex: 1 1 0;;
+    }
+
+    .products{
+        display:flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        
+    }
+    
+    .thumb img{
+        width: 100px;
+        height: 150px;
+        border-radius: 8px;
+        object-fit:cover;
+    }
+    
+    .card h2{
+        margin: 0 0 10px 0;
+        font-size: 18px
+    }
+    
+    p.desc{
+        margin: 0 0 10px 0;
+        color: #333;
+    }
+    
+    .price{
+        font-weight: bold;
+        margin: 0 0 10px 0;
+    }
+    
+    
+    .btn{
+        background-color: white;
+        border: 2px solid #111;
+        border-radius: 8px;
+        padding: 10px 12px;
+        cursor: pointer;
+    
+        margin-top: auto;
+    }
+    
+    .btn:hover{
+        background-color: #111;
+        color: white;
+        border-color: #111;
+    }
+    .btn-group{
+        display: flex;
+        gap: 10px;
+        flex-direction: row;}
+    
     background-color: blanchedalmond;
     grid-area: main;
+
 }
 
 nav{
@@ -104,8 +162,6 @@ footer{
     grid-template-areas: 
       "header"
         "nav"
-        "main"
-        "main"
         "main"
         "box1"
         "box2"
