@@ -1,42 +1,32 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
+box-sizing: border-box;
 }
+
+/*Desktopové meny*/
 
 .menu{
     list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 100%;
-    justify-content: center;
-    
 }
-.menu li a:hover{
-    background-color: brown;
-}
+
 .menu li a{
     text-decoration: none;
     color: black;
-    background-color: white;
-    padding: 12px;
-    width: 100%;
-    display: block;
-    border-radius: 8px;
-    
+    background-color: white;   
 }
 
 .container{
     display: grid;
 
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,100px);
     gap: 10px;
 
     grid-template-areas: 
       "header header header header header"
-        ". nav nav nav ."
+      ". nav nav nav ."
         ". main main main box1"
         ". main main main box2"
         ". main main main box3"
@@ -51,135 +41,66 @@ header{
 }
 
 main{
-    .card{
-        background-color: white;
-        border: 2px solid #ddd;
-        border-radius: 12px;
-        flex: 1 0 0;;
-        
-    }
-
-    .products{
-        display:flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        grid-area: product;
-        
-    }
-    
-    .thumb img{
-        width: auto;
-        height: 150px;
-        border-radius: 8px;
-        object-fit:cover;
-    }
-    
-    .card h2{
-        margin: 0 0 5px 0;
-        font-size: 18px
-    }
-    
-    p.desc{
-        margin: 0 0 10px 0;
-        color: #333;
-    }
-    
-    .price{
-        font-weight: bold;
-        margin: 0 0 10px 0;
-    }
-    
-    
-    .btn{
-        background-color: white;
-        border: 2px solid #111;
-        border-radius: 8px;
-        padding: 10px 12px;
-        cursor: pointer;
-    
-        margin-top: auto;
-    }
-    
-    .btn:hover{
-        background-color: #111;
-        color: white;
-        border-color: #111;
-    }
-    .btn-group{
-        display: flex;
-        gap: 5px;
-        flex-direction: row;}
-    
-    background-color: blanchedalmond;
+    background-color: antiquewhite;
     grid-area: main;
-
 }
 
 nav{
-    background-color: blueviolet;
+    background-color: blue;
     grid-area: nav;
-    align-items: center;
-    display: flex;
 }
 
 footer{
-    background-color: burlywood;
+    background-color: azure;
     grid-area: footer;
 }
+
 .box1{
-    background-color: aqua;
+    background-color: darkgray;
     grid-area: box1;
 }
 .box2{
-    background-color: aqua;
+    background-color: darkgray;
     grid-area: box2;
 }
 .box3{
-    background-color: aqua;
+    background-color: darkgray;
     grid-area: box3;
 }
 .box4{
-    background-color: aqua;
+    background-color: darkgray;
     grid-area: box4;
 }
 .box5{
-    background-color: aqua;
+    background-color: darkgray;
     grid-area: box5;
 }
 .box6{
-    background-color: aqua;
+    background-color: darkgray;
     grid-area: box6;
 }
 
 @media (max-width: 768px){
-     .container{
+    .container{
     display: grid;
 
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 100px);
-    gap: 0px;
-
-    
+    grid-template-rows: repeat(12,100px);
 
     grid-template-areas: 
-      "header"
+      "header "
         "nav"
-        "main"
-        "box1"
-        "box2"
-        "box3"
-        "box4"
-        "box5"
-        "box6"
-        "UwUfooter"
+        "main "
+        "main "
+        "main "
+        "box1 "
+        "box2 "
+        "box3 "
+        "box4 "
+        "box5 "
+        "box6 "s
+        "footer"
     ;
 }
-.menu{
-    list-style: unset;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    justify-content: center;
-}
+
 }
