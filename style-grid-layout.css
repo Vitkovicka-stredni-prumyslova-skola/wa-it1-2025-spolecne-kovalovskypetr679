@@ -31,7 +31,7 @@
     display: grid;
 
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(7, 100px);
+    grid-template-rows: repeat(7, 1fr);
     gap: 10px;
 
     grid-template-areas: 
@@ -55,25 +55,27 @@ main{
         background-color: white;
         border: 2px solid #ddd;
         border-radius: 12px;
-        flex: 1 1 0;;
+        flex: 1 0 0;;
+        
     }
 
     .products{
         display:flex;
-        gap: 15px;
+        gap: 10px;
         flex-wrap: wrap;
+        grid-area: product;
         
     }
     
     .thumb img{
-        width: 100px;
+        width: auto;
         height: 150px;
         border-radius: 8px;
         object-fit:cover;
     }
     
     .card h2{
-        margin: 0 0 10px 0;
+        margin: 0 0 5px 0;
         font-size: 18px
     }
     
@@ -105,7 +107,7 @@ main{
     }
     .btn-group{
         display: flex;
-        gap: 10px;
+        gap: 5px;
         flex-direction: row;}
     
     background-color: blanchedalmond;
