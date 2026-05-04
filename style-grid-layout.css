@@ -4,8 +4,69 @@
 
 box-sizing: border-box;
 }
+.card{
+    display:grid;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 14px;
+    flex: 1 1 200px;
 
-/*Desktopové meny*/
+    flex-direction: column;
+    grid-area: card;
+}
+.products{
+    display:flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    
+}
+
+.thumb img{
+    width: 100%;
+    height: 100px;
+    border-radius: 8px;
+    object-fit:cover;
+}
+
+.card h2{
+    margin: 0 0 10px 0;
+    font-size: 18px
+}
+
+p.desc{
+    margin: 0 0 10px 0;
+    color: #333;
+    flex: auto;
+}
+
+.price{
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+
+.btn{
+    background-color: white;
+    border: 2px solid #111;
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+
+    margin-top: auto;
+}
+
+.btn:hover{
+    background-color: #111;
+    color: white;
+    border-color: #111;
+}
+.btn-group{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin-top: auto;
+}
 
 .menu{
     list-style: none;
@@ -21,7 +82,7 @@ box-sizing: border-box;
     display: grid;
 
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(6,100px);
+    grid-template-rows: repeat(7,100px);
     gap: 10px;
 
     grid-template-areas: 
@@ -31,6 +92,7 @@ box-sizing: border-box;
         ". main main main box2"
         ". main main main box3"
         ". box4 box5 box6 ."
+        "footer footer footer footer footer"
         "footer footer footer footer footer"
     ;
 }
@@ -81,15 +143,31 @@ footer{
 }
 
 @media (max-width: 768px){
+    .card{
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 12px;
+        padding: 14px;
+        flex: 1 100px;
+        display: flex;
+        flex-direction: column;
+        grid-area: card;}
+    
     .container{
     display: grid;
 
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(12,100px);
+    grid-template-rows: repeat(20,100px);
 
     grid-template-areas: 
       "header "
         "nav"
+        "main "
+        "main "
+        "main "
+        "main "
+        "main "
+        "main "
         "main "
         "main "
         "main "
@@ -98,9 +176,11 @@ footer{
         "box3 "
         "box4 "
         "box5 "
-        "box6 "s
+        "box6 "
         "footer"
+
     ;
+
 }
 
 }
