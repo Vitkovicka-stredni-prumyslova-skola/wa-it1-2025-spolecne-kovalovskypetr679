@@ -1,186 +1,200 @@
-*{
+* {
     margin: 0;
     padding: 0;
-
-box-sizing: border-box;
+    box-sizing: border-box;
 }
-.card{
-    display:grid;
+
+/* Desktopové menu */
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.menu li a:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px;
+    display: block;
+}
+
+.menu li {
+    flex: 1;
+    max-width: 100px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 100px);
+    gap: 10px;
+    grid-template-areas:
+        "header header header header header"
+        ". nav nav nav ." 
+        ". main main main box1" 
+        ". main main main box2" 
+        ". main main main box3"
+        ". main main main ."
+        ". main main main ."
+        ". main main main ."
+        ". box4 box5 box6 ."
+        "footer footer footer footer footer";
+}
+
+header {
+    background-color: rgb(82, 82, 82);
+    grid-area: header;
+    padding: 20px 0; 
+}
+
+main {
+    background-color: rgb(59, 194, 218);
+    grid-area: main;
+    padding: 20px;
+}
+
+nav {
+    background-color: rgb(236, 238, 144);
+    grid-area: nav;
+    align-items: center;
+    display: flex;
+}
+
+footer {
+    background-color: rgb(123, 145, 167);
+    grid-area: footer;
+    min-height: 100px;
+}
+
+.box1 { background-color: rgb(255, 76, 135);
+    grid-area: box1;
+    min-height: 100px;
+}
+
+.box2 { background-color: rgb(255, 179, 179);
+    grid-area: box2;
+    min-height: 100px;
+}
+
+.box3 { background-color: rgb(99, 255, 195);
+    grid-area: box3;
+    min-height: 100px;
+}
+
+.box4 { background-color: rgb(99, 255, 195);
+    grid-area: box4;
+    min-height: 100px;
+}
+
+.box5 { background-color: rgb(99, 255, 195);
+    grid-area: box5;
+    min-height: 100px;
+}
+
+.box6 { background-color: rgb(99, 255, 195);
+    grid-area: box6;
+    min-height: 100px;
+}
+
+.box7 { background-color: rgb(99, 255, 195);
+    grid-area: box7;
+    min-height: 100px;
+}
+
+.products {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    flex-flow: row;
+}
+
+.card {
     background-color: white;
     border: 2px solid #ddd;
     border-radius: 12px;
     padding: 14px;
-    flex: 1 1 200px;
-
+    flex:  1 1 ; 
+    display: flex;
     flex-direction: column;
-    grid-area: card;
-}
-.products{
-    display:flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    
+    max-width: auto;
+    width: 10%;
+    align-items: center;
+    text-align: left;
 }
 
-.thumb img{
+.thumb img {
     width: 100%;
-    height: 100px;
+    height: 150px;
     border-radius: 8px;
-    object-fit:cover;
+    object-fit: cover;
 }
 
-.card h2{
-    margin: 0 0 10px 0;
-    font-size: 18px
-}
-
-p.desc{
-    margin: 0 0 10px 0;
-    color: #333;
-    flex: auto;
-}
-
-.price{
-    font-weight: bold;
-    margin: 0 0 10px 0;
-}
-
-
-.btn{
+.btn {
     background-color: white;
     border: 2px solid #111;
-    border-radius: 8px;
-    padding: 10px 12px;
+    border-radius: 10px;
+    padding: 10px 20px;
     cursor: pointer;
-
     margin-top: auto;
+
 }
 
-.btn:hover{
-    background-color: #111;
-    color: white;
-    border-color: #111;
-}
-.btn-group{
+.btn-group {
     display: flex;
-    gap: 10px;
+    gap: 1%;
     flex-direction: row;
     margin-top: auto;
 }
 
-.menu{
-    list-style: none;
-}
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 0px;
+        grid-template-areas:
+            "header"
+            "nav" 
+            "main" 
+            "box1" 
+            "box2"
+            "box3"
+            "box4"
+            "box5"
+            "box6"
+            "footer";
+    }
 
-.menu li a{
-    text-decoration: none;
-    color: black;
-    background-color: white;   
-}
-
-.container{
-    display: grid;
-
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(7,100px);
-    gap: 10px;
-
-    grid-template-areas: 
-      "header header header header header"
-      ". nav nav nav ."
-        ". main main main box1"
-        ". main main main box2"
-        ". main main main box3"
-        ". box4 box5 box6 ."
-        "footer footer footer footer footer"
-        "footer footer footer footer footer"
-    ;
-}
-
-header{
-    background-color: aqua;
-    grid-area: header;
-}
-
-main{
-    background-color: antiquewhite;
-    grid-area: main;
-}
-
-nav{
-    background-color: blue;
-    grid-area: nav;
-}
-
-footer{
-    background-color: azure;
-    grid-area: footer;
-}
-
-.box1{
-    background-color: darkgray;
-    grid-area: box1;
-}
-.box2{
-    background-color: darkgray;
-    grid-area: box2;
-}
-.box3{
-    background-color: darkgray;
-    grid-area: box3;
-}
-.box4{
-    background-color: darkgray;
-    grid-area: box4;
-}
-.box5{
-    background-color: darkgray;
-    grid-area: box5;
-}
-.box6{
-    background-color: darkgray;
-    grid-area: box6;
-}
-
-@media (max-width: 768px){
-    .card{
-        background-color: white;
-        border: 2px solid #ddd;
-        border-radius: 12px;
-        padding: 14px;
-        flex: 1 100px;
+        .products {
         display: flex;
-        flex-direction: column;
-        grid-area: card;}
-    
-    .container{
-    display: grid;
+        flex-direction: column; 
+        flex-wrap: wrap; 
+        gap: 0;
+    }
 
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(20,100px);
+    .bth{
+        width: 50%;
+    }
 
-    grid-template-areas: 
-      "header "
-        "nav"
-        "main "
-        "main "
-        "main "
-        "main "
-        "main "
-        "main "
-        "main "
-        "main "
-        "main "
-        "box1 "
-        "box2 "
-        "box3 "
-        "box4 "
-        "box5 "
-        "box6 "
-        "footer"
+    .card {
+        width: 100%; 
+        max-width: none; 
+        flex: none;
+        align-items: flex-start; 
+        text-align: left;
+    }
 
-    ;
+    .btn-group {
+        justify-content: flex-start;
 
-}
-
+    }
 }
