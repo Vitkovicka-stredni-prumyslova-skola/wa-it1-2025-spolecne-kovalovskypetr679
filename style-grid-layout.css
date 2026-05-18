@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 
-/* Desktopové menu */
-.menu {
+.menu{
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -114,8 +113,9 @@ footer {
 .products {
     display: flex;
     gap: 15px;
-    flex-direction: row;
-    flex-flow: row;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content:center;
 }
 
 .card {
@@ -123,11 +123,11 @@ footer {
     border: 2px solid #ddd;
     border-radius: 12px;
     padding: 14px;
-    flex:  1 1 ; 
+    flex:  0 1 220px; 
     display: flex;
     flex-direction: column;
-    max-width: auto;
-    width: 10%;
+    max-width: 200px;
+    width: 100px;
     align-items: center;
     text-align: left;
 }
