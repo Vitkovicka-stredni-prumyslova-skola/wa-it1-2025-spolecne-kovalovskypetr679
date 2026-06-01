@@ -20,7 +20,7 @@
 
 .menu li a {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     background-color: white;
     padding: 12px;
     border-radius: 8px;
@@ -28,8 +28,9 @@
 }
 
 .menu li {
-    flex: 1;
-    max-width: 100px;
+    flex: 2;
+    max-width: 110px;
+    flex-direction: column;
 }
 
 .container {
@@ -189,12 +190,12 @@ footer {
         width: 100%; 
         max-width: none; 
         flex: none;
-        align-items: flex-start; 
+        align-items: center; 
         text-align: left;
     }
 
     .btn-group {
-        justify-content: flex-start;
+        justify-content: center;
 
     }
 }
