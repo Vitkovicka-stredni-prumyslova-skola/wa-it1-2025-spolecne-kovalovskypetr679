@@ -1,0 +1,98 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,150px);
+    grid-template-rows: repeat(6,50px);
+    padding: 20px;
+    margin-top: 200px;
+    margin-left: 150px;
+    gap:10px;
+    grid-template-areas:
+    "box1 box2 box2 box2"
+    "box3 box3 box3 box7"
+    "box3 box3 box3 box7"
+    "box4 box5 box6 box7"
+    "box8 box8 box8 box8";
+
+}
+.box1{
+    background-color: darkgray;
+    grid-area: box1;
+    text-align: center;
+    line-height: 40px;
+    border: 2.5px solid black;
+}
+.box2{
+    background-color: darkgray;
+    grid-area: box2;
+    text-align: center;
+    line-height: 40px;
+    border: 2.5px solid black;
+}
+.box3{
+    background-color: darkgray;
+    grid-area: box3;
+    text-align: center;
+    line-height: 100px;
+    border: 2.5px solid black;
+}
+.box4{
+    background-color: darkgray;
+    grid-area: box4;
+    text-align: center;
+    line-height: 40px;
+    border: 2.5px solid black;
+}
+
+.box5{
+    background-color: darkgray;
+    grid-area: box5;
+    text-align: center;
+    line-height: 40px;
+    border: 2.5px solid black;
+}
+
+.box6{
+    background-color: darkgray;
+    grid-area: box6;
+    text-align: center;
+    line-height: 40px;
+    border: 2.5px solid black;
+}
+
+.box7{
+    background-color: darkgray;
+    grid-area: box7;
+    text-align: center;
+    line-height: 150px;
+    border: 2.5px solid black;
+}
+
+.box8{
+    background-color: darkgray;
+    grid-area: box8;
+    text-align: center;
+    line-height: 40px;
+    border: 2.5px solid black;
+}
+
+@media (max-width: 768px){
+    .container{
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12,100px);
+
+    grid-template-areas: 
+      "header "
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "box5"
+        "box6"
+        "box7"
+        "box8"
+    ;
+}
+
+}

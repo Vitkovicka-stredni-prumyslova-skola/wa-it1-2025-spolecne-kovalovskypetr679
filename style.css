@@ -1,0 +1,111 @@
+.container{
+    display: grid;
+    grid-template-columns:(4);
+    grid-template-rows:(5);
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    gap:10px;
+    grid-template-areas:
+    "logo menu menu menu"
+    "hero hero hero sidebar"
+    "hero hero hero sidebar"
+    "karta1 karta2 karta3 sidebar"
+    "footer footer footer footer";
+    font:message-box;
+    font-size: larger;
+
+    
+
+}
+.box{
+    border-start-end-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    border: 2px solid black;
+    background-color: rgba(255, 134, 134, 0.233);
+}
+.box1{
+    grid-area: logo;
+    text-align: center;
+    line-height: 100px;
+    background-color: rgba(150, 7, 7, 0.233);
+}
+.box2{
+    grid-area: menu;
+    text-align: center;
+    line-height: 100px;
+    background-color: rgba(134, 136, 255, 0.233);
+}
+.box3{
+    grid-area: hero;
+    text-align: center;
+    line-height: 200px;
+    background-color: rgba(53, 163, 43, 0.233);
+}
+.box4{
+    grid-area: karta1;
+    text-align: center;
+    line-height: 100px;
+    background-color: rgba(243, 229, 38, 0.233);
+}
+
+.box5{
+    grid-area: karta2;
+    text-align: center;
+    line-height: 100px;
+    background-color: rgba(255, 0, 212, 0.233);
+}
+
+.box6{
+    grid-area: karta3;
+    text-align: center;
+    line-height: 100px;
+    background-color: rgb(70, 98, 105);
+}
+
+.box7{
+    grid-area: sidebar;
+    text-align: center;
+    line-height: 300px;
+    background-color: rgba(1, 255, 213, 0.233);
+}
+
+.box8{
+    grid-area: footer;
+    text-align: center;
+    line-height: 100px;
+    background-color: rgba(255, 187, 0, 0.233);
+}
+
+@media (max-width: 768px){
+    .box3{
+        line-height: 200px;
+
+    }
+    .box7{
+        line-height: 100px;
+    }
+    .container{
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8,100px);
+
+        grid-template-areas: 
+        "logo"
+        "menu"
+        "hero"
+        "hero"
+
+        "karta1"
+        "karta2"
+        "karta3"
+        "sidebar"
+        "footer"
+    ;
+}
+
+}
